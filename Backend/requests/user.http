@@ -1,0 +1,19 @@
+### Create User
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "first_name": "Mason",
+  "last_name": "Capps",
+  "email": "mason@email.com",
+  "strength": 10,
+  "speed": 10,
+  "stamina": 10,
+  "rizz": 10,
+  "magic": 10,
+  "stealth": 10,
+  "health": 10,
+  "kd": 8.79,
+  "rated_by": 0,
+  "rated": 0
+}

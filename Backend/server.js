@@ -8,6 +8,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.post('/user', (req, res) => {
+  console.log(request.body);
+  res.send(req.body);
+})
+
 
 mongoose.connect(`mongodb+srv://${process.env.ADMIN_ID}@ratingprofilesapi.qerbcar.mongodb.net/Rating-Profiles-API?retryWrites=true&w=majority`).then(() => {
   console.log('connected to MongoDB')
