@@ -2,15 +2,26 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const port = 3000
+const User = require('./models/userModel')
 require("dotenv").config();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use(express.json())
 
-app.post('/user', (req, res) => {
-  console.log(request.body);
-  res.send(req.body);
+/// Routes
+app.get('/', (req, res) => {
+  res.send('test')
+});
+
+app.post('/user', async(req, res) => {
+  console.log("posting")
+  try {
+    const user = await User.create(req.body);
+    res.status(200).json(user);
+
+  } catch(error) {
+    console.log(error.message);
+    res.status(500).json({message: error.message})
+  }
 })
 
 

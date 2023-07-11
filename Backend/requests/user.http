@@ -1,5 +1,5 @@
 ### Create User
-POST http://localhost:3000/user
+POST http://localhost:9000/user
 Content-Type: application/json
 
 {
@@ -17,3 +17,6 @@ Content-Type: application/json
   "rated_by": 0,
   "rated": 0
 }
+
+### Get
+GET http://localhost:9000
