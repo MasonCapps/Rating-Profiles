@@ -6,9 +6,9 @@ POST http://localhost:3000/user
 Content-Type: application/json
 
 {
-  "firstName": "Mason",
-  "lastName": "Capps",
-  "email": "mason@email.com",
+  "firstName": "Karson",
+  "lastName": "Kelley",
+  "email": "karson@email.com",
   "strength": 10,
   "speed": 10,
   "stamina": 10,
@@ -16,7 +16,7 @@ Content-Type: application/json
   "magic": 10,
   "stealth": 10,
   "health": 10,
-  "kd": 8.79,
+  "kd": 3.79,
   "ratedBy": 0,
   "rated": 0
 }
