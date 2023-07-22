@@ -9,8 +9,17 @@ app.use(express.json())
 
 /// Routes
 app.get('/', (req, res) => {
-  res.send('test')
+  res.send('Home Page')
 });
+
+app.get('/users', async(req, res) => {
+  try {
+    const users = await User.find()
+    res.status(200).json(users)
+  } catch(error) {
+    res.status(500).json({message: error.message})
+  }
+})
 
 app.post('/user', async(req, res) => {
   console.log("posting")
