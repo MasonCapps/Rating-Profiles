@@ -1,5 +1,8 @@
-### Get Users
+### Get All Users
 GET http://localhost:3000/users
+
+### Get Single User
+GET http://localhost:3000/users/64ae28724b942ba0763ad67b
 
 ### Create User
 POST http://localhost:3000/user
