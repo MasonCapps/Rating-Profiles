@@ -31,7 +31,7 @@ app.get('/users/:id', async(req, res) => {
   }
 })
 
-app.post('/user', async(req, res) => {
+app.post('/users', async(req, res) => {
   console.log("posting")
   try {
     const user = await User.create(req.body);
@@ -40,6 +40,20 @@ app.post('/user', async(req, res) => {
   } catch(error) {
     console.log(error.message);
     res.status(500).json({message: error.message})
+  }
+})
+
+app.put('/users/:id', async(req, res) => {
+  try {
+    const {id} = req.params;
+    const user = await User.findByIdAndUpdate(id, req.body);
+    if (!user) {
+      return res.status(404).json({message: `No product found with ID ${id}`});
+    }
+    const updatedUser = await User.findById(id);
+    res.status(200).json(updatedUser);
+  } catch(error) {
+    res.status(500).json({message: error.message});
   }
 })
 

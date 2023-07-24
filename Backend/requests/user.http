@@ -2,10 +2,10 @@
 GET http://localhost:3000/users
 
 ### Get Single User
-GET http://localhost:3000/users/64ae28724b942ba0763ad67b
+GET http://localhost:3000/users/64bc0fa1089b37a84d7b0d54
 
 ### Create User
-POST http://localhost:3000/user
+POST http://localhost:3000/users
 Content-Type: application/json
 
 {
@@ -14,6 +14,26 @@ Content-Type: application/json
   "email": "karson@email.com",
   "strength": 10,
   "speed": 10,
+  "stamina": 10,
+  "rizz": 10,
+  "magic": 10,
+  "stealth": 10,
+  "health": 10,
+  "kd": 3.79,
+  "ratedBy": 0,
+  "rated": 0
+}
+
+### Update User
+PUT http://localhost:3000/users/64bc0fa1089b37a84d7b0d54
+Content-Type: application/json
+
+{
+  "firstName": "Karson",
+  "lastName": "Kelley",
+  "email": "karson@email.com",
+  "strength": 10,
+  "speed": 9,
   "stamina": 10,
   "rizz": 10,
   "magic": 10,
