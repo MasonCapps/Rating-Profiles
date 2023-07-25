@@ -43,3 +43,6 @@ Content-Type: application/json
   "ratedBy": 0,
   "rated": 0
 }
+
+### Delete User
+DELETE http://localhost:3000/users/64bc0fa1089b37a84d7b0d54
