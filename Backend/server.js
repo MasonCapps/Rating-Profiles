@@ -7,7 +7,7 @@ require("dotenv").config();
 
 app.use(express.json())
 
-/// Routes
+/// Home Route
 app.get('/', (req, res) => {
   res.send('Home Page')
 });
