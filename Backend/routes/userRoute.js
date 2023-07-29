@@ -1,5 +1,5 @@
 /// Get All Users
-app.get('/users', async(req, res) => {
+app.get('/users', async(res) => {
   try {
     const users = await User.find()
     res.status(200).json(users)
