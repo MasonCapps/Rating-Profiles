@@ -1,13 +1,15 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const app = express()
-const port = 3000
-const User = require('./models/userModel')
+const express = require('express');
+const mongoose = require('mongoose');
+const app = express();
+const port = 3000;
+const userRoute = require('./routes/userRoute');
 require("dotenv").config();
 
-app.use(express.json())
+app.use(express.json());
 
 /// Home Route
+app.use('/api', userRoute);
+
 app.get('/', (req, res) => {
   res.send('Home Page')
 });
