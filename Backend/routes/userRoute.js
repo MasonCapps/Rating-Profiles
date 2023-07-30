@@ -8,6 +8,7 @@ app.get('/users', async(res) => {
   }
 })
 
+/// Get Single User
 app.get('/users/:id', async(req, res) => {
   try {
     const {id} = req.params
@@ -18,6 +19,7 @@ app.get('/users/:id', async(req, res) => {
   }
 })
 
+/// Create User
 app.post('/users', async(req, res) => {
   console.log("posting")
   try {
@@ -30,6 +32,7 @@ app.post('/users', async(req, res) => {
   }
 })
 
+/// Update User
 app.put('/users/:id', async(req, res) => {
   try {
     const {id} = req.params;
@@ -44,6 +47,7 @@ app.put('/users/:id', async(req, res) => {
   }
 })
 
+/// Delete User
 app.delete('/users/:id', async(req, res) => {
   try {
     const {id} = req.params;
