@@ -10,6 +10,8 @@ import { User } from './user.model'
   providedIn: 'root'
 })
 export class UserService {
+  selectedUser: User;
+  users: User[];
 
   constructor() { }
 }
