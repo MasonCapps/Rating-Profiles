@@ -14,6 +14,7 @@ export class UserComponent implements OnInit {
   constructor(public userService: UserService) { }
 
   ngOnInit(): void {
+    this.clearForm();
   }
 
   clearForm(form?: NgForm) {
