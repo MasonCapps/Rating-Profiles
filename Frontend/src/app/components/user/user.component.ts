@@ -37,5 +37,13 @@ export class UserComponent implements OnInit {
       rated: null
 
     }
+
+    onSubmit(form : NgForm) {
+      this.userService.createUser(form?.value).subscribe((res) => {
+        this.clearForm(form);
+      });
+    }
+
   }
+}
 }
