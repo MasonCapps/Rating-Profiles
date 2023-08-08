@@ -1,1 +1,22 @@
-<p>user works!</p>
+<form #userForm="ngForm" ngSubmit="onSubmit(userForm)">
+  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userService.selectedUser._id">
+  <div>
+    <input type="text" name="firstName" #firstName="ngModel" [(ngModel)]="userService.selectedUser.firstName"
+      placeholder="Enter first name">
+    <label>First Name:</label>
+  </div>
+  <div>
+    <input type="text" name="lastName" #lastName="ngModel" [(ngModel)]="userService.selectedUser.lastName"
+      placeholder="Enter last name">
+    <label>Last Name:</label>
+  </div>
+  <div>
+    <input type="text" name="email" #email="ngModel" [(ngModel)]="userService.selectedUser.email"
+      placeholder="Enter email">
+    <label>Email:</label>
+  </div>
+  <div>
+    <button type="button">Clear</button>
+    <button type="button">Submit</button>
+  </div>
+</form>

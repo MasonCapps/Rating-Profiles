@@ -3,13 +3,13 @@ export class User {
   firstName: string;
   lastName: string;
   email: string;
-  strength: number;
-  speed: number;
-  rizz: number;
-  magic: number;
-  stealth: number;
-  health: number;
-  kd: number;
-  ratedBy: number;
-  rated: number
+  strength: number | null;
+  speed: number | null;
+  rizz: number | null;
+  magic: number | null;
+  stealth: number | null;
+  health: number | null;
+  kd: number | null;
+  ratedBy: number | null;
+  rated: number | null
 }

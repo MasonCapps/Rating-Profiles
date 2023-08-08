@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms'
 
 import { UserService } from '../../services/user.service'
 
@@ -10,9 +11,30 @@ import { UserService } from '../../services/user.service'
 })
 export class UserComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(public userService: UserService) { }
 
   ngOnInit(): void {
   }
 
+  clearForm(form?: NgForm) {
+    if (form) {
+      form.reset();
+    }
+    this.userService.selectedUser = {
+      _id: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      strength: null,
+      speed: null,
+      rizz: null,
+      magic: null,
+      stealth: null,
+      health: null,
+      kd: null,
+      ratedBy: null,
+      rated: null
+
+    }
+  }
 }
