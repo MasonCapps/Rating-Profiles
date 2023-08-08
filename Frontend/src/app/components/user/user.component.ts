@@ -13,6 +13,8 @@ export class UserComponent implements OnInit {
 
   constructor(public userService: UserService) { }
 
+  message = {};
+
   ngOnInit(): void {
     this.clearForm();
   }
@@ -37,13 +39,13 @@ export class UserComponent implements OnInit {
       rated: null
 
     }
-
-    onSubmit(form : NgForm) {
-      this.userService.createUser(form?.value).subscribe((res) => {
-        this.clearForm(form);
-      });
-    }
-
   }
-}
+
+  onSubmit(form: NgForm) {
+    this.userService.createUser(form?.value).subscribe((res) => {
+      this.clearForm(form);
+      this.message = res;
+    });
+  }
+
 }
