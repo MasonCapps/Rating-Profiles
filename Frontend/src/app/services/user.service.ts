@@ -15,6 +15,9 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   createUser(user: User) {
+    user.firstName = this.selectedUser.firstName;
+    user.lastName = this.selectedUser.lastName;
+    user.email = this.selectedUser.email;
     user.strength = Math.floor(Math.random() * 10) + 1;
     user.speed = Math.floor(Math.random() * 10) + 1;
     user.rizz = Math.floor(Math.random() * 10) + 1;
