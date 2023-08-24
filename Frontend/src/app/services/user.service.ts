@@ -15,6 +15,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   createUser(user: User) {
+    console.log(this.selectedUser.firstName)
     user.firstName = this.selectedUser.firstName;
     user.lastName = this.selectedUser.lastName;
     user.email = this.selectedUser.email;
