@@ -1,5 +1,4 @@
 <form #userForm="ngForm" ngSubmit="onSubmit(userForm)">
-  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userService.selectedUser._id">
   <div>
     <label>First Name: </label>
     <input type="text" name="firstName" #firstName="ngModel" [(ngModel)]="userService.selectedUser.firstName"

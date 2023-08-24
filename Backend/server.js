@@ -4,9 +4,11 @@ const app = express();
 const port = 3000;
 const userRoute = require('./routes/userRoute');
 require("dotenv").config();
-const cors = require('cors')
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 app.use(express.urlencoded({extended: false}));
+app.use(express.json())
 app.use(cors())
 
 /// Home Route

@@ -15,19 +15,15 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   createUser(user: User) {
-    console.log(this.selectedUser.firstName)
-    user.firstName = this.selectedUser.firstName;
-    user.lastName = this.selectedUser.lastName;
-    user.email = this.selectedUser.email;
+    console.log(user.firstName)
     user.strength = Math.floor(Math.random() * 10) + 1;
     user.speed = Math.floor(Math.random() * 10) + 1;
     user.rizz = Math.floor(Math.random() * 10) + 1;
-    user.magic = Math.floor(Math.random() * 10) + 1;
     user.stealth = Math.floor(Math.random() * 10) + 1;
     user.health = Math.floor(Math.random() * 10) + 1;
+    user.magic = Math.floor(Math.random() * 10) + 1;
     user.kd = Math.round((Math.random() * 9 + 1) * 100) / 100;
-    user.ratedBy = 0;
-    user.rated = 0;
-    return this.http.post(this.url, user);
+
+    return this.http.post(this.url, user)
   }
 }

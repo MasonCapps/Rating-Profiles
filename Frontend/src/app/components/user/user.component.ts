@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms'
+import { NgForm } from '@angular/forms';
 
-import { UserService } from '../../services/user.service'
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-user',
@@ -13,8 +13,6 @@ export class UserComponent implements OnInit {
 
   constructor(public userService: UserService) { }
 
-  message = {};
-
   ngOnInit(): void {
     this.clearForm();
   }
@@ -23,11 +21,12 @@ export class UserComponent implements OnInit {
     if (form) {
       form.reset();
     }
+
     this.userService.selectedUser = {
-      _id: "",
-      firstName: "",
-      lastName: "",
-      email: "",
+      _id: '',
+      firstName: '',
+      lastName: '',
+      email: '',
       strength: null,
       speed: null,
       rizz: null,
@@ -37,15 +36,12 @@ export class UserComponent implements OnInit {
       kd: null,
       ratedBy: null,
       rated: null
-
     }
   }
 
   onSubmit(form: NgForm) {
-    this.userService.createUser(form.value).subscribe((res) => {
-      this.clearForm(form);
-      console.log("test")
-    });
+    this.userService.createUser(form?.value).subscribe((res) => {
+      this.clearForm(form)
+    })
   }
-
 }
